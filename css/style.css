@@ -40,7 +40,8 @@
   .nav-links a {
     text-decoration: none;
     color: white;
-    padding: 8px;
+    padding: 5px;
+    font-weight: bold;
   }
   
   .nav-links a:hover {
@@ -72,7 +73,9 @@
     background-size: cover; 
     color: white; 
     text-align: center; 
-    padding: 50px 20px; 
+    padding: 300px 20px; 
+    font-size: 2em;
+    font-family: Helvetica;
   }
 
   .foundation-section{
@@ -125,3 +128,42 @@
     font-family: 'Lucida Sans';
     color: gray;
   }
+
+.bk-video {
+    background-image: url("../img/Shared-Space-at-BDD.png");
+    background-attachment: fixed;  /* Parallax effect: make the background stay in place as the content scrolls */
+    background-size: cover; 
+    padding: 50px; 
+    text-align: center;
+    height: 400px; /* Set a fixed height */
+    position: relative; /* Maintain positioning for absolute elements */
+}
+
+/* Create a semi-transparent overlay */
+.bk-video::before {
+    position: absolute; /* Position it absolutely */
+    background-color: rgba(0, 0, 0, 0.7); /* Black overlay with 50% darkness */
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    z-index: 1; /* Layer below the text and image */
+}
+
+/* Ensure the text is above the overlay */
+.bk-video h1 {
+    color: #f9f9f9;
+    font-family: Helvetica;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative; /* Ensure the text is above the overlay */
+    z-index: 2; /* Layer above the overlay */
+}
+
+/* Ensure the image is above the overlay */
+.bk-video img {
+    width: 500px;
+    position: relative; /* Ensure the image is above the overlay */
+    z-index: 2; /* Layer above the overlay */
+}
+
