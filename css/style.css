@@ -73,7 +73,41 @@
     padding: 50px 20px; 
   }
 
-  .foundations{
-    display: flex; 
-    justify-content: center; 
+  .foundation-section{
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+
+  .foundation-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .foundation{
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    margin: 20px; 
+    padding: 20px; 
+    width: 300px;
+    box-shadow: 0 2px 5px #a4a1a1; 
+    text-align: center;
+  }
+
+  .foundation img {
+    width: 90%;
+    height: 90px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  .foundation h3{
+    margin-bottom: 10px;
+  }
+
+  .foundation p {
+    font-size: 17px;
+    font-family: 'Lucida Sans';
+    color: gray;
   }
