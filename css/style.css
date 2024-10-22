@@ -9,12 +9,23 @@
   }
   
   header {
-    background-color: #E5E2E2;
+    height: 100px;
     padding: 10px 20px;
     position: sticky;
     top: 0;
+    z-index: 10;
+    background-size: cover;
   }
   
+  header, .intro-section {
+    background-image: url("../img/cat.jpg"); /* Use the same background image for both */
+    background-size: cover; /* Ensure it covers both sections */
+    background-position: top; /* Start from the top of the image */
+    background-attachment: fixed; /* Parallax effect to keep the image in the same spot as you scroll without it it wasnt working */
+    color: white;
+    background-repeat: no-repeat;
+  }  
+
   .navbar {
     display: flex; /* so the logo and the nav links are aligned */
     justify-content: space-between;
@@ -22,9 +33,9 @@
   }
   
   .logo img {
-    width: 90px;
-    height: 110px;
-    margin: 2px 20px 2px 100px; 
+    width: 80px;
+    height: 90px;
+    margin: 0 20px 2px 100px; 
   }
   
   .nav-links {
@@ -69,8 +80,6 @@
   }
   
   .intro-section {
-    background-color: grey;
-    background-size: cover; 
     color: white; 
     text-align: center; 
     padding: 300px 20px; 
