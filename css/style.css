@@ -275,3 +275,22 @@
 }
 
 
+.store-cont {
+  padding: 50px;
+  text-align: center;
+  color: grey; 
+}
+
+.store-img {
+  display: flex;               
+  justify-content: center;      
+  gap: 8px;                 
+}
+
+.store-img img {               
+  max-width: 100%;            
+  height: auto;               
+  width: 20%;     
+  padding: 20px;           
+}
+
