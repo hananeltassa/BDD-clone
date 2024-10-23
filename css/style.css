@@ -321,3 +321,22 @@
   padding: 20px; 
 }
 
+
+
+
+
+.word-section {
+  display: flex;
+  justify-content: center; 
+  padding: 50px;
+  gap: 15px; 
+}
+.word-section img {
+  width: 250px; 
+  margin: 0;   
+}
+
+.word-section h1 {
+  font-weight: bold;
+  padding-right: 100px;
+}
