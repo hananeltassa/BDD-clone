@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'TheMixBlackCaps';
+  src: url('../fonts/themix-2/TheMixBlack-Caps.otf') format('opentype'); /* Adjust the path as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +12,7 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'TheMixBlackCaps', sans-serif;
   }
   
   header {
@@ -109,7 +116,7 @@
     text-align: center; 
     padding: 300px 20px; 
     font-size: 2em;
-    font-family: Helvetica;
+    font-family: TheMixBlackCaps;
   }
 
   .foundation-section{
@@ -167,10 +174,10 @@
     background-image: url("../img/Shared-Space-at-BDD.png");
     background-attachment: fixed;  /* Parallax effect: make the background stay in place as the content scrolls */
     background-size: cover; 
-    padding: 50px; 
+    padding: 40px; 
     text-align: center;
     height: 400px; /* Set a fixed height */
-    position: relative; /* Maintain positioning for absolute elements */
+    position: relative; /* Maintain positioning for absolute elements */ 
 }
 
 /* Create a semi-transparent overlay */
@@ -187,9 +194,9 @@
 /* Ensure the text is above the overlay */
 .bk-video h1 {
     color: #f9f9f9;
-    font-family: Helvetica;
+    font-family: TheMixBlackCaps;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     position: relative; /* Ensure the text is above the overlay */
     z-index: 2; /* Layer above the overlay */
 }
@@ -202,12 +209,13 @@
 }
 
 .join-our-com h1 {
-  font-family: 'Bodoni'; 
+  font-family: 'TheMixBlackCaps'; 
   font-weight: bold; 
-  font-size: 1.9em; 
-  text-align: center; 
-  margin: 20px 0; 
-  color: #333;
+  font-size: 2em; 
+  text-align: center;
+  padding: 30px; 
+  margin: 10px 0; 
+  color: #000000;
 }
 
 .join-our {
@@ -246,8 +254,10 @@
 }
 
 .join li {
-  padding: 5px 5px 2px 25px;
+  padding: 5px 2px 5px 20px;
   position: relative; /* Set position for pseudo-element */
+  color: grey;
+  font-family:  Helvetica;
 }
 
 .join li::before { /* to create a Custom bullet character, ::before is to insert content before the actual content of the selected element.*/
@@ -339,4 +349,83 @@
 .word-section h1 {
   font-weight: bold;
   padding-right: 100px;
+}
+
+footer {
+  background-color: #28282B; 
+  padding: 30px;
+  color: white; 
+  text-align: left; 
+}
+
+.footer-header {
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+  margin: 15px 180px 2px 50px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;  /* Allows wrapping for smaller screens */
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.footer-section {
+  min-width: 100px; 
+  margin: 15px; 
+}
+
+.footer-section h3 {
+  color: grey;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none; 
+  padding: 0;
+}
+
+.footer-section li {
+  margin: 5px 0; 
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: white;       
+}
+
+.footer-section a:hover {
+  text-decoration: underline; 
+  text-decoration-color: blue; 
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 5px; /* Space between icon and text */
+  vertical-align: middle; /* Align icons with text */
+}
+
+.footer-img{
+  margin-top: 10px; 
+  display: flex;
+  gap: 5px;
+}
+
+.footer-img img{
+  width: 170px;
+}
+
+/* Placeholder icons */
+.email-icon::before {
+  content: '📧';
+}
+
+.phone-icon::before {
+  content: '📞'; 
+}
+
+.footer-bottom {
+  margin-top: 20px; 
 }
