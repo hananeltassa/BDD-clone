@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'TheMixSemiBold';
+  src: url('../fonts/themix-2/TheMixSemiBold-Plain.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,18 +19,19 @@
   }
   
   body {
-    font-family: 'TheMixBlackCaps', sans-serif;
+    font-family: 'TheMixBlackCaps', 'TheMixSemiBold', sans-serif;
   }
   
   header {
     height: 100px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     position: sticky;
     top: 0;
     z-index: 10;
+    background: transparent;
     background-size: cover;
   }
-  
+
   header, .intro-section {
     background-image: url("../img/section1.jpg"); 
     background-size: cover;
@@ -60,7 +68,8 @@
   .nav-links a {
     text-decoration: none;
     color: white;
-    padding: 5px 2px;
+    font-family: TheMixSemiBold;
+    padding: 2px 2px;
   }
   
   .nav-links a:hover {
@@ -70,22 +79,22 @@
   }
 
   .dropdown-menu{
-    display: none;
+    display: none; /*hide the menu by default*/
     position: absolute; /* to position the drop down under the title */
     top: 100%;
-    padding: 10px;
-  }
-  .dropdown:hover .dropdown-menu{
-    display: block;
     background-color: #fff;
-    padding: 20px;
     border-radius: 5px;
     list-style: none;
     font-size: 13px;
+    white-space: nowrap; /*this prevents the text from wrapping */
   }
 
-  .dropdown-menu li {
-    margin: 5px 0;
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
+
+.dropdown-menu li {
+  margin: 5px 0;
 }
 
 .dropdown-menu a {
@@ -126,12 +135,12 @@
   }
 
   .foundation-section h1{
-        font-family: 'Bodoni'; 
-        font-weight: bold; 
-        font-size: 1.9em; 
-        text-align: center; 
-        margin: 20px 0; 
-        color: #333;
+    font-family: 'TheMixBlackCaps'; 
+    font-weight: bold; 
+    font-size: 1.9em; 
+    text-align: center; 
+    margin: 20px 0; 
+    color: #333;
     
   }
 
@@ -153,7 +162,7 @@
 
   
   .foundation img {
-    width: 70%;
+    width: 120px;
     height: 90px;
     padding: 10px;
     border-radius: 4px;
@@ -165,9 +174,10 @@
   }
 
   .foundation p {
-    font-size: 17px;
-    font-family: 'Lucida Sans';
+    font-size: 15px;
+    font-family: 'TheMixSemiBold';
     color: gray;
+    padding: 15px 18px 15px 5px;
   }
 
 .bk-video {
@@ -333,36 +343,36 @@
   padding: 20px; 
 }
 
-
-
-
-
 .trending-section {
   padding: 20px;
+  background-color: #e7dada;
   background-image: url("../img/bg-icon-empty.png");
   text-align: center;
 }
 
+.trending-section h1{
+  padding-bottom: 20px;
+}
+
 .treding-cont {
   display: flex;
-  justify-content: center; /*so items are in the middle */
-  flex-wrap: wrap; /* for smaller screens */
-  gap: 10px;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  align-items: flex-start; /* Align items at the start & this allows each cont to have its own height based on its content*/
 }
 
 .trend {
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0;
-  width: 25%;
-  max-width: 300px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  display: flex;
-  flex-direction: column; 
-  justify-content: flex-start; 
   text-align: left;
+  border-radius: 5px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0; 
 }
 
 .trend img {
@@ -373,14 +383,16 @@
 }
 
 .trend h3 {
-  margin: 10px; 
+  margin: 10px 0; /* Space above and below the heading */
+  padding: 10px;
 }
 
 .trend-info {
-  color: gray; 
-  margin: 10px; 
+  color: gray;
+  margin: 10px 5px; /* Space above and below the info */
 }
 
+ 
 .trend-btn{
   background-color: #007bff; 
   color: white; 
@@ -465,7 +477,8 @@ footer {
 
 .footer-section a {
   text-decoration: none;
-  color: white;       
+  color: white;   
+  font-family: 'TheMixSemiBold';    
 }
 
 .footer-section a:hover {
@@ -499,5 +512,7 @@ footer {
 }
 
 .footer-bottom {
-  margin-top: 20px; 
+  margin-top: 20px;
+  font-size: smaller; 
+  font-family:'TheMixSemiBold' ;
 }
