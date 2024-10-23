@@ -389,7 +389,9 @@
 
 .trend-info {
   color: gray;
-  margin: 10px 5px; /* Space above and below the info */
+  font-family:'TheMixSemiBold' ;
+  font-size: smaller;
+  margin: 5px 20px; /* Space above and below the info */
 }
 
  
@@ -500,6 +502,20 @@ footer {
 
 .footer-img img{
   width: 170px;
+}
+
+.terms {
+  display: flex; 
+  justify-content: flex-start; 
+  align-items: center; 
+  list-style: none; 
+  padding: 0; 
+  margin: 2px 0; 
+}
+
+.terms li {
+  margin: 5px;
+  font-size: 12px;
 }
 
 /* Placeholder icons */
