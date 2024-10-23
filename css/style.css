@@ -18,8 +18,8 @@
   }
   
   header, .intro-section {
-    background-image: url("../img/cat.jpg"); /* Use the same background image for both */
-    background-size: cover; /* Ensure it covers both sections */
+    background-image: url("../img/section1.jpg"); 
+    background-size: cover;
     background-position: top; /* Start from the top of the image */
     background-attachment: fixed; /* Parallax effect to keep the image in the same spot as you scroll without it it wasnt working */
     color: white;
@@ -33,52 +33,77 @@
   }
   
   .logo img {
-    width: 80px;
-    height: 90px;
-    margin: 0 20px 2px 100px; 
+    width: 90px;
+    height: 110px;
+    margin: 0 20px 30px 100px; 
   }
   
   .nav-links {
     list-style: none;
     display: flex; /* so the links are beside each other */
+    justify-content: space-between;
     align-items: center; /* Ensure vertical alignment */
   }
   
   .nav-links li {
     margin-right: 20px; /* Reduce margin-right for less space */
+    position: relative;
   }
   
   .nav-links a {
     text-decoration: none;
     color: white;
-    padding: 5px;
-    font-weight: bold;
+    padding: 5px 2px;
   }
   
   .nav-links a:hover {
-    background-color: rgba(210, 214, 218, 0.7); /* Transparent background on hover */
+    background-color: rgba(210, 214, 218, 0.7); 
     border-radius: 5px;
     color: rgba(255, 255, 255, 0.7); /* Transparent white text on hover */
   }
+
+  .dropdown-menu{
+    display: none;
+    position: absolute; /* to position the drop down under the title */
+    top: 100%;
+    padding: 10px;
+  }
+  .dropdown:hover .dropdown-menu{
+    display: block;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    list-style: none;
+    font-size: 13px;
+  }
+
+  .dropdown-menu li {
+    margin: 5px 0;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    display: block;
+}
+
+
   
   .btn-join-us {
-    background-color: #007bff;
-    color: white;
+    background-color: #007bff; 
+    color: white; 
     border-radius: 25px;
-    text-decoration: none;
-    padding: 12px 30px;
-    display: inline-block;
-    width: auto;
-    min-width: 100px; /* Set a minimum width for the button */
-    text-align: center; 
-    
+    display: inline-block;  
+    padding: 10px 30px; 
+    min-width: 100px; 
+    text-align: center;
   }
-  
+
   .btn-join-us:hover {
-    background-color: rgba(0, 123, 255, 0.7);
-    color: rgba(255, 255, 255, 0.7); 
+      color: rgba(255, 255, 255, 0.7);  /* Only change text color on hover */
   }
-  
+
   .intro-section {
     color: white; 
     text-align: center; 
@@ -175,4 +200,78 @@
     position: relative; /* Ensure the image is above the overlay */
     z-index: 2; /* Layer above the overlay */
 }
+
+.join-our-com h1 {
+  font-family: 'Bodoni'; 
+  font-weight: bold; 
+  font-size: 1.9em; 
+  text-align: center; 
+  margin: 20px 0; 
+  color: #333;
+}
+
+.join-our {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+  align-items: stretch; /* Ensures all items are stretched to the same height */
+}
+
+.join-our img {
+  width: 500px;
+}
+
+.join {
+  border: 1px solid cornsilk;
+  border-radius: 2px;
+  width: 20%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /*distributes space between the flex items.*/
+  background-image: url("../img/bg-icon.png");
+  background-size: cover; 
+  overflow: auto;
+}
+
+.join h3 {
+  padding: 20px 10px;
+}
+
+.join ul {
+  flex-grow: 1; /* Allows the ul to take the remaining space */
+  margin: 0; /* Reset */
+  padding: 0;
+  list-style: none;
+}
+
+.join li {
+  padding: 5px 5px 2px 25px;
+  position: relative; /* Set position for pseudo-element */
+}
+
+.join li::before { /* to create a Custom bullet character, ::before is to insert content before the actual content of the selected element.*/
+  content: '•'; 
+  color: #007bff;
+  font-size: 1.5em; 
+  position: absolute; 
+  left: 0;
+  top: 0;
+  line-height: 1; /* Center the bullet vertically with the text */
+  padding-left: 8px;
+}
+
+.btn-know {
+  align-self: center;
+  margin-top: 10px; /* Space between the list and the button */
+  background-color: #007bff; 
+  color: white; 
+  padding: 10px 30px; 
+  min-width: 100px; 
+  text-align: center;
+  border: none;
+  border-radius: 20px; 
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
 
